@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belezas do Brasil</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&family=Rakkas&display=swap');
+
+/* Variáveis */
+:root {
+    --primary-color: #026773;
+    --secondary-color: #3CA6A6;
+    --text-color: #F2E3D5;
+    --background-color: #204A4F;
+    --button-hover: #012E40;
+    --font-body: "Chocolate Classical Sans", serif;
+    --font-titulo: "Rakkas", serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+/* Body Styles */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    font-family: var(--font-titulo);
+}
+
+.image-container {
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px auto 20px;
+    width: 40%;
+    max-height: 400px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+header p {
+    font-size: 1.1em;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: var(--button-hover);
+}
+
+/* Main Content Styles */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.conteudo {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: #333;
+}
+
+.conteudo h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    font-family: var(--font-titulo);
+}
+
+.conteudo h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.conteudo p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.paisagem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.paisagem-item {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.paisagem-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+.cta-footer {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-footer:hover {
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    .conteudo {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .cta-button {
+        width: 100%;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .paisagem-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <h1>Belezas do Brasil</h1>
+        <div class="image-container">
+            <img src="cataratas.jpeg"
+                alt="Foto das Cataratas do Iguaçu, um dos mais belos patrimônios naturais do Brasil.">
+        </div>
+        <p>O Brasil é um país de dimensões continentais, repleto de paisagens deslumbrantes, rica diversidade cultural e patrimônios naturais únicos no mundo. Descubra as maravilhas que fazem do nosso país um dos destinos mais extraordinários do planeta.</p>
+        <nav>
+            <ul>
+                <li><a href="#paisagens">Paisagens Únicas</a></li>
+                <li><a href="#cultura">Cultura e Tradições</a></li>
+                <li><a href="#patrimonio">Patrimônio Natural</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="paisagens" class="conteudo">
+            <h2>As 8 Maiores Paisagens do Brasil</h2>
+            <p>O território brasileiro abriga paisagens de tirar o fôlego, desde praias paradisíacas até formações rochosas milenares. Cada região possui características únicas que demonstram a incrível diversidade geográfica e natural do nosso país.</p>
+            
+            <div class="paisagem-grid">
+                <div class="paisagem-item">
+                    <h4>1. Cataratas do Iguaçu - Paraná</h4>
+                    <p>Uma das sete maravilhas naturais do mundo, as Cataratas do Iguaçu impressionam com suas 275 quedas d'água em meio à exuberante Mata Atlântica. O conjunto de cachoeiras forma um espetáculo único, onde a força da natureza se manifesta em toda sua grandiosidade.</p>
+                </div>
+
+                <div class="paisagem-item">
+                    <h4>2. Lençóis Maranhenses - Maranhão</h4>
+                    <p>Um deserto de areias brancas pontuado por lagoas cristalinas de cores que variam do azul turquesa ao verde esmeralda. Durante o período chuvoso, as dunas se transformam em um mosaico aquático que parece surgir de um sonho.</p>
+                </div>
+
+                <div class="paisagem-item">
+                    <h4>3. Chapada Diamantina - Bahia</h4>
+                    <p>Berço de nascentes que alimentam importantes bacias hidrográficas, a Chapada Diamantina encanta com suas cachoeiras cristalinas, grutas milenares, montanhas imponentes e uma biodiversidade única do cerrado baiano.</p>
+                </div>
+
+                <div class="paisagem-item">
+                    <h4>4. Fernando de Noronha - Pernambuco</h4>
+                    <p>Arquipélago vulcânico com praias de areias douradas e águas transparentes, Fernando de Noronha é um santuário ecológico marinho. Suas águas abrigam uma rica vida aquática, incluindo golfinhos, tartarugas e uma infinidade de peixes tropicais.</p>
+                </div>
+
+                <div class="paisagem-item">
+                    <h4>5. Pantanal - Mato Grosso/Mato Grosso do Sul</h4>
+                    <p>A maior planície alagável do mundo, o Pantanal é um dos ecossistemas mais ricos em biodiversidade do planeta. Durante as cheias, transforma-se em um imenso espelho d'água que reflete o céu infinito, abrigando onças, jacarés, araras e centenas de outras espécies.</p>
+                </div>
+
+                <div class="paisagem-item">
+                    <h4>6. Amazônia - Região Norte</h4>
+                    <p>A maior floresta tropical do mundo, conhecida como "pulmão do planeta", a Amazônia abriga uma biodiversidade incomparável. Seus rios meandrosos, árvores centenárias e uma infinidade de espécies fazem dela um dos ecossistemas mais importantes da Terra.</p>
+                </div>
+
+                <div class="paisagem-item">
+                    <h4>7. Jalapão - Tocantins</h4>
+                    <p>Um oásis no coração do cerrado brasileiro, o Jalapão impressiona com suas dunas douradas, fervedouros cristalinos, cachoeiras imponentes e campos de sempre-vivas que colorem a paisagem com tons vibrantes durante a florada.</p>
+                </div>
+
+                <div class="paisagem-item">
+                    <h4>8. Monte Roraima - Roraima</h4>
+                    <p>Uma das formações geológicas mais antigas do planeta, o Monte Roraima ergue-se como uma ilha no céu, inspirando lendas indígenas e aventureiros. Seu topo plano e isolado abriga espécies endêmicas e paisagens que parecem de outro mundo.</p>
+                </div>
+            </div>
+
+            <a href="https://www.youtube.com/watch?v=5R3eZqy-_gc" class="cta-button" target="_blank">Veja as belezas do Brasil <i class="fa-solid fa-arrow-up-right-from-square" style="color: var(--text-color);"></i></a>
+        </section>
+
+        <section id="cultura" class="conteudo">
+            <h2>Cultura e Tradições Brasileiras</h2>
+            
+            <h3>Herança Indígena</h3>
+            <p>Os povos indígenas são os primeiros habitantes do Brasil e guardiões ancestrais de nossa terra. Com mais de 300 etnias e 270 línguas diferentes, eles representam uma riqueza cultural imensa que influencia profundamente nossa identidade nacional. A sabedoria indígena se manifesta no conhecimento sobre plantas medicinais, técnicas sustentáveis de cultivo, artesanato em cerâmica, cestaria e plumária, além de uma cosmologia rica que vê a natureza como sagrada.</p>
+            
+            <p>A influência indígena está presente em diversos aspectos da cultura brasileira: na culinária, com ingredientes como mandioca, açaí, guaraná e castanha-do-pará; na linguagem, com milhares de palavras de origem tupi-guarani; e nas tradições, como o hábito da rede para descanso e técnicas de pesca e caça que ainda hoje são utilizadas em comunidades ribeirinhas.</p>
+
+            <h3>Diversidade Cultural Brasileira</h3>
+            <p>O Brasil é um verdadeiro mosaico cultural, resultado da miscigenação entre povos indígenas, africanos e europeus, enriquecido por imigrações posteriores de japoneses, árabes, italianos e muitos outros povos. Esta diversidade se expressa em manifestações culturais únicas como o Carnaval, o Bumba-meu-boi, a Festa Junina, o Frevo pernambucano, o Maracatu, a Capoeira e o Samba.</p>
+
+            <p>Cada região brasileira desenvolveu características culturais próprias: o Norte com suas lendas amazônicas e festivais folclóricos; o Nordeste com seu rico folclore, literatura de cordel e música regional; o Centro-Oeste com tradições pantaneiras e sertanejas; o Sudeste como berço da música popular brasileira e centro de efervescência cultural; e o Sul com influências europeias marcantes na arquitetura, gastronomia e tradições.</p>
+
+            <h3>Patrimônios da Humanidade</h3>
+            <p>O Brasil possui 23 sítios reconhecidos pela UNESCO como Patrimônio Mundial, incluindo cidades históricas como Ouro Preto, Salvador, Olinda e Diamantina; paisagens naturais como Fernando de Noronha, Pantanal e Costa do Descobrimento; e manifestações culturais imateriais como o Samba de Roda do Recôncavo Baiano, a Roda de Capoeira e o Frevo.</p>
+        </section>
+
+        <section id="patrimonio" class="conteudo">
+            <h2>Patrimônio Natural e Biodiversidade</h2>
+            
+            <h3>Biomas Únicos</h3>
+            <p>O Brasil abriga seis biomas distintos, cada um com características ecológicas únicas. A Amazônia, com sua floresta tropical úmida, é lar de aproximadamente 10% de toda a biodiversidade conhecida no planeta. O Cerrado, savana tropical mais rica do mundo, funciona como berço das águas brasileiras. A Mata Atlântica, apesar de altamente fragmentada, ainda preserva endemismos extraordinários. A Caatinga, única no mundo, adaptou-se perfeitamente ao clima semiárido. O Pantanal, maior planície alagável contínua do planeta, e os Campos Sulinos, com seus campos nativos, completam este mosaico de vida.</p>
+
+            <h3>Importância Global</h3>
+            <p>O Brasil detém a maior biodiversidade do planeta, com estimativas de 15% a 20% de todas as espécies conhecidas. São mais de 120.000 espécies de invertebrados, 8.930 espécies de vertebrados, 55.000 espécies de plantas superiores e milhares de microorganismos. Esta riqueza biológica representa um patrimônio inestimável para a humanidade, sendo fonte de alimentos, medicamentos, materiais e serviços ecossistêmicos essenciais para a vida no planeta.</p>
+
+            <h3>Conservação e Sustentabilidade</h3>
+            <p>A preservação deste patrimônio natural é fundamental não apenas para o Brasil, mas para todo o planeta. As florestas brasileiras desempenham papel crucial na regulação do clima global, na manutenção do ciclo hidrológico e na absorção de carbono. Iniciativas de conservação, desenvolvimento sustentável e valorização dos conhecimentos tradicionais são essenciais para garantir que as futuras gerações possam desfrutar desta herança natural única.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5R3eZqy-_gc?si=feol6sZCHo1Cg-jQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/femascheti" class="cta-footer">Conheça mais sobre o Brasil!</a>
+        <p>2025 | @femascheti</p>
+    </footer>
+</body>
+
+</html>
